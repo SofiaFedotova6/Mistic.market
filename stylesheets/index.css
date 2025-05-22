@@ -1,45 +1,49 @@
-/* Подключение шрифта DIN Condensed
+/* Подключение шрифта DIN Condensed */
 @font-face {
-    font-family: 'DIN Condensed';
-    src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
-         url('fonts/DINCondensed-Bold.woff') format('woff'),
-         url('fonts/DINCondensed-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-   */
-  html {
-    height: 100vh;
-  }
-  
-  body {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white; /* Добавляем белый цвет текста для лучшей видимости на черном фоне */
-    font-family: 'DIN Condensed', Arial, sans-serif; /* Применяем шрифт */
-  }
-  
-  /* Стили для текстовых блоков */
-  #text1, .text2 {
-    /* font-family: 'DIN Condensed', Arial, sans-serif; */
-    max-width: 80%;
-    margin: 20px auto;
-  }
-  
-  /* Стили для кнопок */
-  .container button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .container button:hover {
-    transform: scale(1.05);
-  }
-  
+  font-family: 'DIN Condensed';
+  src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+       url('fonts/DINCondensed-Bold.woff') format('woff'),
+       url('fonts/DINCondensed-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white; /* Добавляем белый цвет текста для лучшей видимости на черном фоне */
+  font-family: 'DIN Condensed', Arial, sans-serif; /* Применяем шрифт */
+}
+
+#Center img {
+  width: 23vw;
+  height: 22vw;
+  margin-top: -2vw; 
+}
+/* Стили для текстовых блоков */
+#text1, .text2 {
+  font-family: 'DIN Condensed', Arial, sans-serif;
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+/* Стили для кнопок */
+.container button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.container button:hover {
+  transform: scale(1.05);
+}
