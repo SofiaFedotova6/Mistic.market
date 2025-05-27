@@ -1,0 +1,281 @@
+/* Подключение шрифта DIN Condensed */
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+         url('fonts/DINCondensed-Bold.woff') format('woff'),
+         url('fonts/DINCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Чёрный задний фон */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+    position: relative;
+}
+
+/* Контейнер для кнопок - максимально высоко */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 80px 0 80px; /* Минимальный отступ сверху */
+    box-sizing: border-box;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+/* Общие стили для всех кнопок */
+.first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn, .seven-btn {
+    width: 220px;
+    height: 150px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Стили для div внутри кнопок */
+.first-btn div, .second-btn div, .third-btn div, .fifth-btn div, .six-btn div, .seven-btn div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для изображений внутри кнопок */
+.first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img, .seven-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Седьмая кнопка - рядом с book1 и под текстом */
+.seven-btn {
+    position: absolute;
+    top: 270px; /* Под текстовым блоком */
+    right: 1400px; /* Рядом с book1 */
+    z-index: 2;
+    width: 250px;
+    height: 170px;
+}
+
+/* Текстовый блок - под кнопками слева, сильно увеличенный и растянутый */
+#text1 {
+    position: absolute;
+    top: 200px; /* Под кнопками */
+    left: 80px; /* С левой стороны */
+    right: 400px; /* Растягиваем почти до правого края, оставляя место для book1 */
+    max-width: 1200px; /* Сильно увеличено для растяжения */
+    color: #E0AAFF; /* Фиолетовый цвет */
+    z-index: 2;
+    font-size: 28px; /* Сильно увеличено */
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+#text1 p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Блок book1 - уменьшен и расположен ниже и правее */
+#book1 {
+    position: absolute;
+    bottom: -200px; /* Расположен ниже (было 120px) */
+    right: 30px; /* Расположен правее (было -200px) */
+    width: 1100px; /* Уменьшено (было 1200px) */
+    height: 900px; /* Уменьшено (было 900px) */
+    z-index: 1;
+}
+
+#book1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Убираем стандартные стили для ссылок */
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 1600px) {
+    .container {
+        padding: 20px 60px 0 60px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 180px;
+        height: 120px;
+    }
+    
+    .seven-btn {
+        width: 200px;
+        height: 140px;
+        top: 350px;
+        right: 60px;
+    }
+    
+    #text1 {
+        left: 60px;
+        right: 350px;
+        top: 160px;
+        max-width: 1000px;
+        font-size: 26px;
+    }
+    
+    #book1 {
+        width: 700px; /* Уменьшено */
+        height: 525px; /* Уменьшено */
+        right: -240px;
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .container {
+        padding: 20px 50px 0 50px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 160px;
+        height: 110px;
+    }
+    
+    .seven-btn {
+        width: 180px;
+        height: 125px;
+        top: 320px;
+        right: 40px;
+    }
+    
+    #text1 {
+        left: 50px;
+        right: 300px;
+        top: 140px;
+        max-width: 900px;
+        font-size: 24px;
+    }
+    
+    #book1 {
+        width: 640px; /* Уменьшено */
+        height: 480px; /* Уменьшено */
+        right: -200px;
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px 40px 0 40px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 140px;
+        height: 95px;
+    }
+    
+    .seven-btn {
+        width: 160px;
+        height: 110px;
+        top: 280px;
+        right: 30px;
+    }
+    
+    #text1 {
+        left: 40px;
+        right: 250px;
+        top: 120px;
+        max-width: 800px;
+        font-size: 22px;
+    }
+    
+    #book1 {
+        width: 560px;
+        height: 420px;
+        right: -160px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px 25px 0 25px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 120px;
+        height: 80px;
+    }
+    
+    .seven-btn {
+        position: static;
+        width: 140px;
+        height: 90px;
+        margin: 20px auto;
+    }
+    
+    #text1 {
+        position: static;
+        margin: 20px 25px;
+        max-width: none;
+        right: auto;
+        font-size: 20px;
+    }
+    
+    #book1 {
+        position: static;
+        margin: 20px auto;
+        width: 700px;
+        height: 600px;
+        right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        gap: 15px;
+        padding: 15px 15px 0 15px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 100px;
+        height: 70px;
+    }
+    
+    .seven-btn {
+        width: 120px;
+        height: 80px;
+        margin: 15px auto;
+    }
+    
+    #text1 {
+        font-size: 18px;
+        margin: 20px 15px;
+    }
+    
+    #book1 {
+        width: 320px;
+        height: 240px;
+    }
+}
+
+

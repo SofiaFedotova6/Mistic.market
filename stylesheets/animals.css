@@ -1,0 +1,308 @@
+/* Подключение шрифта DIN Condensed */
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+         url('fonts/DINCondensed-Bold.woff') format('woff'),
+         url('fonts/DINCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Чёрный задний фон */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    height: auto; /* Высота подстраивается под контент */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Контейнер для кнопок - максимально высоко */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 80px 0 80px; /* было 20px, стало 10px */
+    box-sizing: border-box;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+/* Общие стили для всех кнопок */
+.first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+    width: 220px;
+    height: 150px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Стили для div внутри кнопок */
+.first-btn div, .second-btn div, .third-btn div, .fifth-btn div, .six-btn div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для изображений внутри кнопок */
+.first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Стили для секции Dragon1 */
+#Dragon1 {
+    position: absolute;
+    top: 150px; /* Под кнопками (высота кнопки 150px + отступ) */
+    left: 80px; /* Выравнивание с левым краем кнопок */
+    width: 700px; /* Можете изменить размер по необходимости */
+    height: 600px; /* Можете изменить размер по необходимости */
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Общие стили для изображений в Dragon1 */
+#Dragon1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение info1 изначально скрыто */
+#Dragon1 img[alt="info1"] {
+    opacity: 0;
+}
+
+/* Изображение Dragon1 изначально видно */
+#Dragon1 img[alt="Dragon1"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Dragon1 */
+#Dragon1:hover img[alt="Dragon1"] {
+    opacity: 0;
+}
+
+#Dragon1:hover img[alt="info1"] {
+    opacity: 1;
+}
+
+
+/* Стили для секции Dragon1 */
+#Dragon2 {
+    position: absolute;
+    top: 700px; /* Под кнопками (высота кнопки 150px + отступ) */
+    left: 80px; /* Выравнивание с левым краем кнопок */
+    width: 700px; /* Можете изменить размер по необходимости */
+    height: 600px; /* Можете изменить размер по необходимости */
+    cursor: pointer;
+    z-index: 2;
+}
+/* Общие стили для изображений в Dragon1 */
+#Dragon2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение info1 изначально скрыто */
+#Dragon2 img[alt="info2"] {
+    opacity: 0;
+}
+
+/* Изображение Dragon1 изначально видно */
+#Dragon2 img[alt="Dragon2"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Dragon1 */
+#Dragon2:hover img[alt="Dragon2"] {
+    opacity: 0;
+}
+
+#Dragon2:hover img[alt="info2"] {
+    opacity: 1;
+}
+
+
+/* Стили для секции Dragon1 */
+#Dragon3 {
+    position: absolute;
+    top: 1250px; /* Под кнопками (высота кнопки 150px + отступ) */
+    left: 80px; /* Выравнивание с левым краем кнопок */
+    width: 700px; /* Можете изменить размер по необходимости */
+    height: 600px; /* Можете изменить размер по необходимости */
+    cursor: pointer;
+    z-index: 2;
+}
+/* Общие стили для изображений в Dragon1 */
+#Dragon3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение info1 изначально скрыто */
+#Dragon3 img[alt="info3"] {
+    opacity: 0;
+}
+
+/* Изображение Dragon1 изначально видно */
+#Dragon3 img[alt="Dragon3"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Dragon1 */
+#Dragon3:hover img[alt="Dragon3"] {
+    opacity: 0;
+}
+
+#Dragon3:hover img[alt="info3"] {
+    opacity: 1;
+}
+
+/* Стили для секции Eg1 */
+#Eg1 {
+    position: absolute;
+    top: 150px; /* Под кнопками (высота кнопки 150px + отступ) */
+    right: 80px; /* Выравнивание с правым краем кнопок */
+    width: 700px; /* Такой же размер как у Dragon блоков */
+    height: 600px; /* Такой же размер как у Dragon блоков */
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Общие стили для изображений в Eg1 */
+#Eg1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение Temp1 изначально скрыто */
+#Eg1 img[alt="Temp1"] {
+    opacity: 0;
+}
+
+/* Изображение Eg1 изначально видно */
+#Eg1 img[alt="Eg1"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Eg1 */
+#Eg1:hover img[alt="Eg1"] {
+    opacity: 0;
+}
+
+#Eg1:hover img[alt="Temp1"] {
+    opacity: 1;
+}
+
+/* Стили для секции Eg2 */
+#Eg2 {
+    position: absolute;
+    top: 700px; /* Под кнопками (высота кнопки 150px + отступ) */
+    right: 80px; /* Выравнивание с правым краем кнопок */
+    width: 700px; /* Такой же размер как у Dragon блоков */
+    height: 600px; /* Такой же размер как у Dragon блоков */
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Общие стили для изображений в Eg2 */
+#Eg2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение Temp2 изначально скрыто */
+#Eg2 img[alt="Temp2"] {
+    opacity: 0;
+}
+
+/* Изображение Eg2 изначально видно */
+#Eg2 img[alt="Eg2"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Eg2 */
+#Eg2:hover img[alt="Eg2"] {
+    opacity: 0;
+}
+
+#Eg2:hover img[alt="Temp2"] {
+    opacity: 1;
+}
+
+/* Стили для секции Eg3 */
+#Eg3 {
+    position: absolute;
+    top: 1250px; /* Под кнопками (высота кнопки 150px + отступ) */
+    right: 80px; /* Выравнивание с правым краем кнопок */
+    width: 700px; /* Такой же размер как у Dragon блоков */
+    height: 600px; /* Такой же размер как у Dragon блоков */
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Общие стили для изображений в Eg3 */
+#Eg3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение Temp3 изначально скрыто */
+#Eg3 img[alt="Temp3"] {
+    opacity: 0;
+}
+
+/* Изображение Eg3 изначально видно */
+#Eg3 img[alt="Eg3"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Eg3 */
+#Eg3:hover img[alt="Eg3"] {
+    opacity: 0;
+}
+
+#Eg3:hover img[alt="Temp3"] {
+    opacity: 1;
+}
