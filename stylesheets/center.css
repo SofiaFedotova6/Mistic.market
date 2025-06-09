@@ -1,0 +1,566 @@
+/* Подключение шрифта DIN Condensed */
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+         url('fonts/DINCondensed-Bold.woff') format('woff'),
+         url('fonts/DINCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Чёрный задний фон */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    height: auto; /* Высота подстраивается под контент */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Контейнер для кнопок - максимально высоко */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 80px 0 80px; /* было 20px, стало 10px */
+    box-sizing: border-box;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+/* Общие стили для всех кнопок */
+.first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+    width: 220px;
+    height: 150px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Стили для div внутри кнопок */
+.first-btn div, .second-btn div, .third-btn div, .fifth-btn div, .six-btn div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для изображений внутри кнопок */
+.first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Текстовый блок - под кнопками слева */
+#text1 {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    width: 900px;
+    height: 800px;
+    color: #E0AAFF;
+    z-index: 2;
+    font-size: 24px;
+    line-height: 1.6;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#text1 p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Блок foto1 - под кнопками справа */
+#foto1 {
+    position: absolute;
+    top: 60px;
+    right: -990px;
+    width: 600px;
+    height: 400px;
+    z-index: 2;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Стили для изображений внутри foto1 */
+#foto1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Первое изображение (Foto2) - видимое по умолчанию */
+#foto1 img[src*="Foto2"] {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Второе изображение (Foto1) - скрытое по умолчанию */
+#foto1 img[src*="Foto1"] {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* При наведении на блок foto1 */
+#foto1:hover img[src*="Foto2"] {
+    opacity: 0; /* Скрываем Foto2 */
+}
+
+#foto1:hover img[src*="Foto1"] {
+    opacity: 1; /* Показываем Foto1 */
+}
+
+/* Убираем стандартные стили для ссылок */
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Секция fotos - опускаем ниже и увеличиваем */
+#fotos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 50px auto; /* Увеличен верхний отступ с 50px до 100px */
+    max-width: 1600px; /* Увеличена максимальная ширина */
+    padding: 0 20px;
+    height: auto;
+    min-height: 500px; /* Увеличена минимальная высота */
+    top: 10px; /* Опускаем еще ниже */
+}
+
+/* Общие стили для изображений в секции fotos */
+#fotos img {
+    max-width: 1000px; /* Увеличено с 700px до 1000px */
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 0.4s ease-in-out;
+    display: block;
+}
+
+/* Foto4 (показывается по умолчанию) */
+#fotos img[alt="Foto4"] {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+/* Foto3 (скрыто по умолчанию) */
+#fotos img[alt="Foto3"] {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: 1000px; /* Увеличено с 700px до 1000px */
+}
+
+/* При наведении на секцию fotos */
+#fotos:hover img[alt="Foto4"] {
+    opacity: 0; /* Скрываем Foto4 */
+}
+
+#fotos:hover img[alt="Foto3"] {
+    opacity: 1; /* Показываем Foto3 */
+}
+
+/* Дублирование стилей для совместимости с src атрибутом */
+#fotos img[src*="Foto4"] {
+    opacity: 1;
+    z-index: 2;
+}
+
+#fotos img[src*="Foto3"] {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1000px; /* Увеличено с 700px до 1000px */
+}
+
+#fotos:hover img[src*="Foto4"] {
+    opacity: 0;
+}
+
+#fotos:hover img[src*="Foto3"] {
+    opacity: 1;
+}
+
+/* Секция metal - располагается слева под блоками foto3 и foto4 */
+#metal {
+    position: absolute;
+    top: 1380px; /* Под секцией fotos */
+    left: 90px; /* С левой стороны */
+    width: 600px;
+    height: 400px;
+    z-index: 2;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Стили для изображений внутри metal */
+#metal img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Первое изображение (Foto6) - видимое по умолчанию */
+#metal img[src*="Foto6"],
+#metal img[alt="Foto6"] {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Второе изображение (Foto5) - скрытое по умолчанию */
+#metal img[src*="Foto5"],
+#metal img[alt="Foto5"] {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* При наведении на блок metal */
+#metal:hover img[src*="Foto6"],
+#metal:hover img[alt="Foto6"] {
+    opacity: 0; /* Скрываем Foto6 */
+}
+
+#metal:hover img[src*="Foto5"],
+#metal:hover img[alt="Foto5"] {
+    opacity: 1; /* Показываем Foto5 */
+}
+
+/* Секция sofs - блок с foto8 и foto7 */
+#sofs {
+    position: absolute;
+    top: 1800px; /* Расположен под другими блоками */
+    left: 90px; /* С левой стороны */
+    width: 600px;
+    height: 400px;
+    z-index: 2;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на всю секцию */
+#sofs:hover {
+    transform: scale(1.02);
+}
+
+/* Стили для изображений внутри sofs */
+#sofs img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out;
+    backface-visibility: hidden; /* Предотвращение мерцания */
+}
+
+/* Foto8 - видимое по умолчанию (основное изображение) */
+#sofs img[src*="Foto8"],
+#sofs img[alt="Foto8"] {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Foto7 - скрытое по умолчанию (появляется при наведении) */
+#sofs img[src*="Foto7"],
+#sofs img[alt="Foto7"] {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* При наведении на секцию sofs */
+#sofs:hover img[src*="Foto8"],
+#sofs:hover img[alt="Foto8"] {
+    opacity: 0; /* Скрываем Foto8 */
+}
+
+#sofs:hover img[src*="Foto7"],
+#sofs:hover img[alt="Foto7"] {
+    opacity: 1; /* Показываем Foto7 */
+}
+    
+
+
+/* Дополнительный эффект тени при наведении (опционально) */
+#sofs::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(224, 170, 255, 0.1), rgba(224, 170, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+#sofs:hover::before {
+    opacity: 1;
+}
+
+/* Блок picture - под кнопками справа (foto10/foto9) */
+#picture {
+    position: absolute;
+    top: 1380px;  /* Размещаем под кнопками foto3 и foto4 */
+    right: 80px; /* Выравниваем по правому краю */
+    width: 600px;
+    height: 400px;
+    z-index: 2;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Стили для изображений внутри picture */
+#picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Первое изображение (Foto10) - видимое по умолчанию */
+#picture img[alt="Foto10"] {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Второе изображение (Foto9) - скрытое по умолчанию */
+#picture img[alt="Foto9"] {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* При наведении на блок picture */
+#picture:hover img[alt="Foto10"] {
+    opacity: 0; /* Скрываем Foto10 */
+}
+
+#picture:hover img[alt="Foto9"] {
+    opacity: 1; /* Показываем Foto9 */
+}
+
+
+/* Текстовый блок - под кнопками слева */
+#text2 {
+    position: absolute;
+    top: 1850px;
+    left: 1030px;
+    width: 600px; /* Увеличена ширина с 500px до 800px */
+    height: 10px;
+    color: #E0AAFF;
+    z-index: 2;
+    font-size: 24px;
+    line-height: 1.6;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#text2 p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Текстовый блок - под кнопками слева */
+#text3 {
+    position: absolute;
+    top: 1800px;
+    left: 1030px;
+    width: 450px;
+    height: 800px;
+    color: #E0AAFF;
+    z-index: 2;
+    font-size: 24px;
+    line-height: 1.6;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#text3 p {
+    margin: 0;
+    padding: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+nav a:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #d481fd;
+}
+
+/* ----------------------------------------
+   Footer: опустить весь блок ещё ниже
+----------------------------------------- */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 80px;
+    margin: 950px auto 0;    
+    box-sizing: border-box;
+    max-width: 1800px;
+}
+
+/* ----------------------------------------
+   Левая секция
+----------------------------------------- */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ffffff;
+    max-width: 600px;
+}
+
+.section span {
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+/* ----------------------------------------
+   Поле email
+----------------------------------------- */
+#email {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#email input[type="email"] {
+    flex: 1;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 15px 20px;
+    color: #ffffff;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    font-size: 18px;
+    outline: none;
+}
+
+#email input[type="email"]::placeholder {
+    color: #ffffff;
+}
+
+#email button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+#email button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* ----------------------------------------
+   Блок автора (справа)
+----------------------------------------- */
+#author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    color: #f98fff;
+    min-width: 400px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#author p {
+    margin: 15px 0;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    font-size: 26px;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+#author a {
+    margin: 15px 0;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+#author a:hover {
+    color: #e89cfb;
+    opacity: 0.8;
+}

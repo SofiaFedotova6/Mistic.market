@@ -1,0 +1,561 @@
+/* Подключение шрифта DIN Condensed */
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+         url('fonts/DINCondensed-Bold.woff') format('woff'),
+         url('fonts/DINCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Чёрный задний фон */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+    position: relative;
+}
+
+/* Контейнер для кнопок - максимально высоко */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 80px 0 80px; /* Минимальный отступ сверху */
+    box-sizing: border-box;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+/* Общие стили для всех кнопок */
+.first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn, .seven-btn {
+    width: 220px;
+    height: 150px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Стили для div внутри кнопок */
+.first-btn div, .second-btn div, .third-btn div, .fifth-btn div, .six-btn div, .seven-btn div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для изображений внутри кнопок */
+.first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img, .seven-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Седьмая кнопка - рядом с book1 и под текстом */
+.seven-btn {
+    position: absolute;
+    top: 270px; /* Под текстовым блоком */
+    right: 1400px; /* Рядом с book1 */
+    z-index: 2;
+    width: 250px;
+    height: 170px;
+}
+
+/* Текстовый блок - под кнопками слева, сильно увеличенный и растянутый */
+#text1 {
+    position: absolute;
+    top: 200px; /* Под кнопками */
+    left: 80px; /* С левой стороны */
+    right: 400px; /* Растягиваем почти до правого края, оставляя место для book1 */
+    max-width: 1200px; /* Сильно увеличено для растяжения */
+    color: #E0AAFF; /* Фиолетовый цвет */
+    z-index: 2;
+    font-size: 28px; /* Сильно увеличено */
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+#text1 p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Блок book1 - уменьшен и расположен ниже и правее */
+#book1 {
+    position: absolute;
+    bottom: -200px; /* Расположен ниже (было 120px) */
+    right: 30px; /* Расположен правее (было -200px) */
+    width: 1100px; /* Уменьшено (было 1200px) */
+    height: 900px; /* Уменьшено (было 900px) */
+    z-index: 1;
+}
+
+#book1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Убираем стандартные стили для ссылок */
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Адаптивные стили */
+
+/* Большие экраны - 1400px и меньше */
+@media (max-width: 1400px) {
+    .container {
+        padding: 20px 60px 0 60px;
+        max-width: 1400px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 180px;
+        height: 120px;
+    }
+    
+    .seven-btn {
+        width: 200px;
+        height: 140px;
+        top: 240px;
+        right: 1200px;
+    }
+    
+    #text1 {
+        left: 60px;
+        right: 350px;
+        top: 170px;
+        max-width: 1000px;
+        font-size: 26px;
+    }
+    
+    #book1 {
+        width: 900px;
+        height: 720px;
+        right: 20px;
+        bottom: -150px;
+    }
+}
+
+/* Средние экраны - 1200px и меньше */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px 40px 0 40px;
+        max-width: 1200px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 160px;
+        height: 110px;
+    }
+    
+    .seven-btn {
+        width: 180px;
+        height: 125px;
+        top: 220px;
+        right: 1000px;
+    }
+    
+    #text1 {
+        left: 40px;
+        right: 300px;
+        top: 150px;
+        max-width: 850px;
+        font-size: 24px;
+    }
+    
+    #book1 {
+        width: 750px;
+        height: 600px;
+        right: 10px;
+        bottom: -100px;
+    }
+}
+
+/* Планшеты - 1024px и меньше */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px 30px 0 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 140px;
+        height: 95px;
+        margin: 5px;
+    }
+    
+    .seven-btn {
+        position: relative;
+        width: 160px;
+        height: 110px;
+        top: auto;
+        right: auto;
+        margin: 20px auto 0 auto;
+    }
+    
+    #text1 {
+        position: static;
+        margin: 30px 0 20px 0;
+        max-width: 100%;
+        font-size: 22px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    #book1 {
+        position: static;
+        width: 100%;
+        max-width: 600px;
+        height: 480px;
+        margin: 20px auto 0 auto;
+    }
+}
+
+/* Мобильные устройства - 768px и меньше */
+@media (max-width: 768px) {
+    body {
+        min-height: auto;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px 0 20px;
+        gap: 20px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 130px;
+        height: 85px;
+        margin: 8px;
+    }
+    
+    .seven-btn {
+        width: 150px;
+        height: 100px;
+        margin: 15px auto 0 auto;
+    }
+    
+    #text1 {
+        margin: 20px 0;
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 0 15px;
+        text-align: center;
+    }
+    
+    #book1 {
+        max-width: 500px;
+        height: 400px;
+        margin: 15px auto 0 auto;
+    }
+    
+    /* Улучшение для touch-устройств */
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn, .seven-btn {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        user-select: none;
+    }
+}
+/* Средние мобильные - 640px и меньше */
+@media (max-width: 640px) {
+    .container {
+        padding: 15px 15px 0 15px;
+        gap: 15px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 120px;
+        height: 80px;
+        margin: 5px;
+    }
+    
+    .seven-btn {
+        width: 140px;
+        height: 90px;
+    }
+    
+    #text1 {
+        font-size: 19px;
+        padding: 0 10px;
+        margin: 15px 0;
+    }
+    
+    #book1 {
+        max-width: 450px;
+        height: 360px;
+    }
+}
+
+/* Маленькие мобильные - 480px и меньше */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px 10px 0 10px;
+        gap: 12px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 110px;
+        height: 75px;
+        margin: 4px;
+    }
+    
+    .seven-btn {
+        width: 130px;
+        height: 85px;
+        margin: 12px auto 0 auto;
+    }
+    
+    #text1 {
+        font-size: 18px;
+        line-height: 1.4;
+        margin: 12px 0;
+        padding: 0 8px;
+    }
+    
+    #book1 {
+        max-width: 380px;
+        height: 300px;
+        margin: 12px auto 0 auto;
+    }
+    
+    /* Сетка кнопок для экономии места */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: start;
+    }
+    
+    .seven-btn {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+}
+
+/* Очень маленькие экраны - 360px и меньше */
+@media (max-width: 360px) {
+    .container {
+        padding: 8px;
+        grid-gap: 8px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 100px;
+        height: 65px;
+        margin: 2px;
+    }
+    
+    .seven-btn {
+        width: 120px;
+        height: 75px;
+        margin: 10px auto 0 auto;
+    }
+    
+    #text1 {
+        font-size: 16px;
+        line-height: 1.3;
+        margin: 10px 0;
+        padding: 0 5px;
+    }
+    
+    #book1 {
+        max-width: 320px;
+        height: 250px;
+        margin: 10px auto 0 auto;
+    }
+}
+
+/* Горизонтальная ориентация для мобильных */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px 15px 0 15px;
+        gap: 8px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 100px;
+        height: 65px;
+        margin: 3px;
+    }
+    
+    .seven-btn {
+        position: relative;
+        width: 120px;
+        height: 75px;
+        margin: 8px;
+    }
+    
+    #text1 {
+        font-size: 16px;
+        margin: 8px 15px;
+        padding: 8px;
+        max-width: 45%;
+        text-align: left;
+    }
+    
+    #book1 {
+        max-width: 300px;
+        height: 200px;
+        margin: 8px;
+    }
+}
+
+/* Очень большие экраны - 1800px и больше */
+@media (min-width: 1800px) {
+    .container {
+        padding: 25px 100px 0 100px;
+        max-width: 2000px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 240px;
+        height: 160px;
+    }
+    
+    .seven-btn {
+        width: 270px;
+        height: 180px;
+        top: 300px;
+        right: 1600px;
+    }
+    
+    #text1 {
+        left: 100px;
+        right: 450px;
+        top: 220px;
+        max-width: 1400px;
+        font-size: 30px;
+    }
+    
+    #book1 {
+        width: 1300px;
+        height: 1040px;
+        right: 50px;
+        bottom: -250px;
+    }
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+    }
+    
+    #text1 {
+        color: #E0AAFF;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Высокая контрастность */
+@media (prefers-contrast: high) {
+    #text1 {
+        color: #FFFFFF;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        border-radius: 8px;
+        border: 2px solid #FFFFFF;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn, .seven-btn {
+        border: 2px solid #FFFFFF;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Уменьшенная анимация */
+@media (prefers-reduced-motion: reduce) {
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn, .seven-btn {
+        transition: none !important;
+    }
+    
+    #text1, #book1 {
+        transition: none !important;
+    }
+}
+
+/* Стили для печати */
+@media print {
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+    
+    .container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 20px !important;
+        position: static !important;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn, .seven-btn {
+        position: static !important;
+        width: 150px !important;
+        height: 100px !important;
+        margin: 10px !important;
+        border: 1px solid #000 !important;
+        page-break-inside: avoid;
+    }
+    
+    #text1 {
+        position: static !important;
+        color: black !important;
+        font-size: 16pt !important;
+        margin: 20px 0 !important;
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    #book1 {
+        position: static !important;
+        width: 100% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        page-break-inside: avoid;
+    }
+}
+
+/* Дополнительная оптимизация для старых браузеров */
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .first-btn img, .second-btn img, .third-btn img, 
+    .fifth-btn img, .six-btn img, .seven-btn img,
+    #book1 img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Улучшение производительности для мобильных */
+@media (max-width: 768px) {
+    * {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn, .seven-btn {
+        will-change: transform;
+    }
+}

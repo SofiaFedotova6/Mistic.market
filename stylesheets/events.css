@@ -1,0 +1,231 @@
+/* Подключение шрифта DIN Condensed */
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+         url('fonts/DINCondensed-Bold.woff') format('woff'),
+         url('fonts/DINCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Чёрный задний фон */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    height: auto; /* Высота подстраивается под контент */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Контейнер для кнопок - максимально высоко */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 80px 0 80px; /* было 20px, стало 10px */
+    box-sizing: border-box;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+/* Общие стили для всех кнопок */
+.first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+    width: 220px;
+    height: 150px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Стили для div внутри кнопок */
+.first-btn div, .second-btn div, .third-btn div, .fifth-btn div, .six-btn div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для изображений внутри кнопок */
+.first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+/* хэдэр */
+
+  #posters {
+    padding-top: 4.2vw;
+    position: relative;
+  }
+  
+  .tickers {
+    display: flex;
+    flex-direction: column;
+    gap: 2.1vw;
+  }
+  
+  #first_row,
+  #second_row,
+  #third_row {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .posters img {
+    height: 42vw;
+    width: 30vw;
+    margin-right: 1.5vw;
+  }
+  
+  .posters {
+    display: inline-block;
+    animation: ticker 13s infinite linear;
+  }
+  
+  @keyframes ticker {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  #first_row:hover .posters,
+  #second_row:hover .posters,
+  #third_row:hover .posters {
+    animation-play-state: paused;
+  }
+  
+  #posters::before,
+  #posters::after {
+    position: absolute;
+    top: 0;
+    width: 20vw;
+    height: 100%;
+    content: '';
+    z-index: 2;
+  }
+  
+  #posters::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #080608);
+  }
+  
+  #posters::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #0e0b0f);
+  }
+
+
+/* Контейнер для footer секций */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 80px;
+    box-sizing: border-box;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Секция слева */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ffffff;
+    max-width: 600px; /* Увеличено с 400px */
+}
+
+.section span {
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    font-size: 24px; /* Увеличено с 18px */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px; /* Увеличено с 20px */
+    line-height: 1.2;
+}
+
+/* Поле email */
+#email {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Увеличено с 10px */
+    width: 100%;
+}
+
+#email input[type="email"] {
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 30px; /* Увеличено с 25px */
+    padding: 15px 20px; /* Увеличено с 10px 15px */
+    color: #ffffff;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    font-size: 18px; /* Увеличено с 14px */
+    flex: 1;
+    outline: none;
+}
+
+#email input[type="email"]::placeholder {
+    color: #ffffff;
+}
+
+#email button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px; /* Увеличено с 5px */
+}
+
+#email button img {
+    width: 40px; /* Увеличено с 30px */
+    height: 40px; /* Увеличено с 30px */
+}
+
+/* Блок автора справа - ЗНАЧИТЕЛЬНО УВЕЛИЧЕН И ПОДНЯТ ВЫШЕ */
+#author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #f98fff;
+    text-align: right;
+    min-width: 400px; /* Увеличено с 250px до 400px */
+    padding: 20px; /* Добавлен внутренний отступ */
+    align-self: flex-start; /* Поднимает блок к верху контейнера */
+    margin-top: -20px; /* Дополнительно поднимает блок выше */
+}
+
+#author p {
+    margin: 15px 0; /* Увеличено с 8px до 15px */
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    font-size: 26px; /* Увеличено с 18px до 26px */
+    color: hsl(0, 0%, 100%);
+    line-height: 1.3; /* Добавлена высота строки */
+}
+
+#author a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    font-size: 32px; /* Увеличено с 22px до 32px */
+    font-weight: bold;
+    margin: 15px 0; /* Увеличено с 8px до 15px */
+    line-height: 1.2; /* Добавлена высота строки */
+}
+
+#author a:hover {
+    color: #e89cfb;
+    opacity: 0.8; /* Добавлен эффект при наведении */
+}
+

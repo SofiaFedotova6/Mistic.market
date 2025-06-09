@@ -1,0 +1,1319 @@
+/* Подключение шрифта DIN Condensed */
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+         url('fonts/DINCondensed-Bold.woff') format('woff'),
+         url('fonts/DINCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Чёрный задний фон */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    height: auto; /* Высота подстраивается под контент */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Контейнер для кнопок - максимально высоко */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 80px 0 80px; /* было 20px, стало 10px */
+    box-sizing: border-box;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+/* Общие стили для всех кнопок */
+.first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+    width: 220px;
+    height: 150px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Стили для div внутри кнопок */
+.first-btn div, .second-btn div, .third-btn div, .fifth-btn div, .six-btn div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для изображений внутри кнопок */
+.first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Стили для секции Dragon1 */
+#Dragon1 {
+    position: absolute;
+    top: 150px; /* Под кнопками (высота кнопки 150px + отступ) */
+    left: 80px; /* Выравнивание с левым краем кнопок */
+    width: 700px; /* Можете изменить размер по необходимости */
+    height: 600px; /* Можете изменить размер по необходимости */
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Общие стили для изображений в Dragon1 */
+#Dragon1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение info1 изначально скрыто */
+#Dragon1 img[alt="info1"] {
+    opacity: 0;
+}
+
+/* Изображение Dragon1 изначально видно */
+#Dragon1 img[alt="Dragon1"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Dragon1 */
+#Dragon1:hover img[alt="Dragon1"] {
+    opacity: 0;
+}
+
+#Dragon1:hover img[alt="info1"] {
+    opacity: 1;
+}
+
+
+/* Стили для секции Dragon1 */
+#Dragon2 {
+    position: absolute;
+    top: 700px; /* Под кнопками (высота кнопки 150px + отступ) */
+    left: 80px; /* Выравнивание с левым краем кнопок */
+    width: 700px; /* Можете изменить размер по необходимости */
+    height: 600px; /* Можете изменить размер по необходимости */
+    cursor: pointer;
+    z-index: 2;
+}
+/* Общие стили для изображений в Dragon1 */
+#Dragon2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение info1 изначально скрыто */
+#Dragon2 img[alt="info2"] {
+    opacity: 0;
+}
+
+/* Изображение Dragon1 изначально видно */
+#Dragon2 img[alt="Dragon2"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Dragon1 */
+#Dragon2:hover img[alt="Dragon2"] {
+    opacity: 0;
+}
+
+#Dragon2:hover img[alt="info2"] {
+    opacity: 1;
+}
+
+
+/* Стили для секции Dragon1 */
+#Dragon3 {
+    position: absolute;
+    top: 1250px; /* Под кнопками (высота кнопки 150px + отступ) */
+    left: 80px; /* Выравнивание с левым краем кнопок */
+    width: 700px; /* Можете изменить размер по необходимости */
+    height: 600px; /* Можете изменить размер по необходимости */
+    cursor: pointer;
+    z-index: 2;
+}
+/* Общие стили для изображений в Dragon1 */
+#Dragon3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение info1 изначально скрыто */
+#Dragon3 img[alt="info3"] {
+    opacity: 0;
+}
+
+/* Изображение Dragon1 изначально видно */
+#Dragon3 img[alt="Dragon3"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Dragon1 */
+#Dragon3:hover img[alt="Dragon3"] {
+    opacity: 0;
+}
+
+#Dragon3:hover img[alt="info3"] {
+    opacity: 1;
+}
+
+/* Стили для секции Eg1 */
+#Eg1 {
+    position: absolute;
+    top: 150px; /* Под кнопками (высота кнопки 150px + отступ) */
+    right: 80px; /* Выравнивание с правым краем кнопок */
+    width: 700px; /* Такой же размер как у Dragon блоков */
+    height: 600px; /* Такой же размер как у Dragon блоков */
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Общие стили для изображений в Eg1 */
+#Eg1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение Temp1 изначально скрыто */
+#Eg1 img[alt="Temp1"] {
+    opacity: 0;
+}
+
+/* Изображение Eg1 изначально видно */
+#Eg1 img[alt="Eg1"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Eg1 */
+#Eg1:hover img[alt="Eg1"] {
+    opacity: 0;
+}
+
+#Eg1:hover img[alt="Temp1"] {
+    opacity: 1;
+}
+
+/* Стили для секции Eg2 */
+#Eg2 {
+    position: absolute;
+    top: 700px; /* Под кнопками (высота кнопки 150px + отступ) */
+    right: 80px; /* Выравнивание с правым краем кнопок */
+    width: 700px; /* Такой же размер как у Dragon блоков */
+    height: 600px; /* Такой же размер как у Dragon блоков */
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Общие стили для изображений в Eg2 */
+#Eg2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение Temp2 изначально скрыто */
+#Eg2 img[alt="Temp2"] {
+    opacity: 0;
+}
+
+/* Изображение Eg2 изначально видно */
+#Eg2 img[alt="Eg2"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Eg2 */
+#Eg2:hover img[alt="Eg2"] {
+    opacity: 0;
+}
+
+#Eg2:hover img[alt="Temp2"] {
+    opacity: 1;
+}
+
+/* Стили для секции Eg3 */
+#Eg3 {
+    position: absolute;
+    top: 1250px; /* Под кнопками (высота кнопки 150px + отступ) */
+    right: 80px; /* Выравнивание с правым краем кнопок */
+    width: 700px; /* Такой же размер как у Dragon блоков */
+    height: 600px; /* Такой же размер как у Dragon блоков */
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Общие стили для изображений в Eg3 */
+#Eg3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Изображение Temp3 изначально скрыто */
+#Eg3 img[alt="Temp3"] {
+    opacity: 0;
+}
+
+/* Изображение Eg3 изначально видно */
+#Eg3 img[alt="Eg3"] {
+    opacity: 1;
+}
+
+/* При наведении на секцию Eg3 */
+#Eg3:hover img[alt="Eg3"] {
+    opacity: 0;
+}
+
+#Eg3:hover img[alt="Temp3"] {
+    opacity: 1;
+}
+
+/* Подключение шрифта DIN Condensed */
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('fonts/DINCondensed-Bold.woff2') format('woff2'),
+         url('fonts/DINCondensed-Bold.woff') format('woff'),
+         url('fonts/DINCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Чёрный задний фон */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    height: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Контейнер для кнопок - максимально высоко */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 80px 0 80px;
+    box-sizing: border-box;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+/* Общие стили для всех кнопок */
+.first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+    width: 220px;
+    height: 150px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+/* Стили для div внутри кнопок */
+.first-btn div, .second-btn div, .third-btn div, .fifth-btn div, .six-btn div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для изображений внутри кнопок */
+.first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Hover эффекты для десктопа */
+.first-btn:hover, .second-btn:hover, .third-btn:hover, .fifth-btn:hover, .six-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   АДАПТИВНЫЕ МЕДИА-ЗАПРОСЫ
+   =================================== */
+
+/* Очень большие экраны - от 2560px */
+@media (min-width: 2560px) {
+    .container {
+        max-width: 2400px;
+        padding: 15px 200px 0 200px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 280px;
+        height: 190px;
+        border-radius: 20px;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 20px;
+    }
+}
+
+/* Очень большие экраны - от 2000px */
+@media (min-width: 2000px) and (max-width: 2559px) {
+    .container {
+        max-width: 2000px;
+        padding: 12px 120px 0 120px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 250px;
+        height: 170px;
+        border-radius: 18px;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 18px;
+    }
+}
+
+/* Большие экраны - 1600px до 1999px */
+@media (min-width: 1600px) and (max-width: 1999px) {
+    .container {
+        max-width: 1800px;
+        padding: 10px 100px 0 100px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 230px;
+        height: 160px;
+        border-radius: 16px;
+    }
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 16px;
+    }
+}
+
+/* Стандартные большие экраны - 1400px до 1599px */
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .container {
+        max-width: 1600px;
+        padding: 10px 80px 0 80px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 220px;
+        height: 150px;
+        border-radius: 15px;
+    }
+}
+
+/* Средние экраны - 1200px до 1399px */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1400px;
+        padding: 10px 60px 0 60px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 200px;
+        height: 135px;
+        border-radius: 14px;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 14px;
+    }
+}
+
+/* Компактные экраны - 1024px до 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        max-width: 1200px;
+        padding: 10px 40px 0 40px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 180px;
+        height: 120px;
+        border-radius: 12px;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 12px;
+    }
+}
+
+/* Планшеты - 768px до 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 100%;
+        padding: 10px 30px 0 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 160px;
+        height: 110px;
+        border-radius: 12px;
+        flex: 0 0 auto;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 12px;
+    }
+}
+
+/* Планшеты вертикально */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    .container {
+        padding: 15px 20px 0 20px;
+        gap: 20px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+/* Большие мобильные - 481px до 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 10px 20px 0 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 150px;
+        height: 100px;
+        border-radius: 10px;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 10px;
+    }
+    
+    /* Убираем hover, добавляем active эффекты */
+    .first-btn:hover, .second-btn:hover, .third-btn:hover, .fifth-btn:hover, .six-btn:hover {
+        transform: none;
+    }
+    
+    .first-btn:active, .second-btn:active, .third-btn:active, .fifth-btn:active, .six-btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Альтернативная горизонтальная раскладка для больших мобильных */
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 8px 15px 0 15px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 130px;
+        height: 85px;
+        border-radius: 8px;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 8px;
+    }
+}
+
+/* Средние мобильные - 361px до 480px */
+@media (min-width: 361px) and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 8px 15px 0 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 140px;
+        height: 95px;
+        border-radius: 10px;
+    }
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 10px;
+    }
+}
+
+/* Маленькие мобильные - до 360px */
+@media (max-width: 360px) {
+    .container {
+        max-width: 100%;
+        padding: 8px 10px 0 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 120px;
+        height: 80px;
+        border-radius: 8px;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 8px;
+    }
+}
+
+/* Очень маленькие экраны - до 320px */
+@media (max-width: 320px) {
+    .container {
+        padding: 6px 5px 0 5px;
+        gap: 6px;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 110px;
+        height: 75px;
+        border-radius: 6px;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        border-radius: 6px;
+    }
+}
+
+/* Touch устройства - оптимизация для сенсорных экранов */
+@media (pointer: coarse) {
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        min-height: 44px; /* Минимальный размер для touch target */
+        min-width: 44px;
+    }
+    
+    /* Убираем hover эффекты */
+    .first-btn:hover, .second-btn:hover, .third-btn:hover, .fifth-btn:hover, .six-btn:hover {
+        transform: none;
+    }
+    
+    /* Добавляем активные состояния */
+    .first-btn:active, .second-btn:active, .third-btn:active, .fifth-btn:active, .six-btn:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* Высокая контрастность */
+@media (prefers-contrast: high) {
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        filter: contrast(1.2);
+    }
+}
+
+/* Уменьшенная анимация */
+@media (prefers-reduced-motion: reduce) {
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        transition: none !important;
+    }
+    
+    .first-btn:hover, .second-btn:hover, .third-btn:hover, .fifth-btn:hover, .six-btn:hover {
+        transform: none !important;
+    }
+    
+    .first-btn:active, .second-btn:active, .third-btn:active, .fifth-btn:active, .six-btn:active {
+        transform: none !important;
+    }
+}
+
+/* Оптимизация производительности для мобильных */
+@media (max-width: 768px) {
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        will-change: transform;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        will-change: auto;
+    }
+}
+
+/* Стили для печати */
+@media print {
+    .container {
+        padding: 10px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        width: 150px !important;
+        height: 100px !important;
+        border: 1px solid black !important;
+        border-radius: 8px !important;
+        page-break-inside: avoid;
+    }
+    
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        filter: grayscale(100%) !important;
+        border-radius: 8px !important;
+    }
+}
+
+/* Специальная обработка для старых браузеров */
+@supports not (display: flex) {
+    .container {
+        display: block;
+        text-align: center;
+    }
+    
+    .first-btn, .second-btn, .third-btn, .fifth-btn, .six-btn {
+        display: inline-block;
+        margin: 5px;
+        vertical-align: top;
+    }
+}
+
+/* Fallback для браузеров без поддержки object-fit */
+@supports not (object-fit: contain) {
+    .first-btn img, .second-btn img, .third-btn img, .fifth-btn img, .six-btn img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+/* Базовые стили для всех блоков драконов */
+#Dragon1, #Dragon2, #Dragon3 {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.2s ease;
+}
+#Dragon1 img, #Dragon2 img, #Dragon3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+/* Скрытые info изображения по умолчанию */
+#Dragon1 img[alt="info1"],
+#Dragon2 img[alt="info2"], 
+#Dragon3 img[alt="info3"] {
+    opacity: 0;
+}
+/* Видимые основные изображения */
+#Dragon1 img[alt="Dragon1"],
+#Dragon2 img[alt="Dragon2"],
+#Dragon3 img[alt="Dragon3"] {
+    opacity: 1;
+}
+/* Hover эффекты для десктопа */
+#Dragon1:hover img[alt="Dragon1"] { opacity: 0; }
+#Dragon1:hover img[alt="info1"] { opacity: 1; }
+#Dragon2:hover img[alt="Dragon2"] { opacity: 0; }
+#Dragon2:hover img[alt="info2"] { opacity: 1; }
+#Dragon3:hover img[alt="Dragon3"] { opacity: 0; }
+#Dragon3:hover img[alt="info3"] { opacity: 1; }
+
+@media (min-width: 2560px) {
+    #Dragon1 {
+        top: 220px; /* Под кнопками высотой 190px + отступ */
+        left: 200px; /* Соответствует padding контейнера */
+        width: 900px;
+        height: 750px;
+    }
+    #Dragon2 {
+        top: 1050px;
+        left: 200px;
+        width: 900px;
+        height: 750px;
+    }
+    #Dragon3 {
+        top: 1880px;
+        left: 200px;
+        width: 900px;
+        height: 750px;
+    }
+}
+@media (min-width: 2000px) and (max-width: 2559px) {
+    #Dragon1 {
+        top: 195px; /* Под кнопками высотой 170px + отступ */
+        left: 120px;
+        width: 800px;
+        height: 680px;
+    }
+    #Dragon2 {
+        top: 950px;
+        left: 120px;
+        width: 800px;
+        height: 680px;
+    }
+    #Dragon3 {
+        top: 1705px;
+        left: 120px;
+        width: 800px;
+        height: 680px;
+    }
+}
+@media (min-width: 1600px) and (max-width: 1999px) {
+    #Dragon1 {
+        top: 180px; /* Под кнопками высотой 160px + отступ */
+        left: 100px;
+        width: 750px;
+        height: 640px;
+    }
+    #Dragon2 {
+        top: 880px;
+        left: 100px;
+        width: 750px;
+        height: 640px;
+    }
+    #Dragon3 {
+        top: 1580px;
+        left: 100px;
+        width: 750px;
+        height: 640px;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
+    #Dragon1 {
+        top: 170px; /* Под кнопками высотой 150px + отступ */
+        left: 80px;
+        width: 700px;
+        height: 600px;
+    }
+    #Dragon2 {
+        top: 820px;
+        left: 80px;
+        width: 700px;
+        height: 600px;
+    }
+    #Dragon3 {
+        top: 1470px;
+        left: 80px;
+        width: 700px;
+        height: 600px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    #Dragon1 {
+        top: 155px; /* Под кнопками высотой 135px + отступ */
+        left: 60px;
+        width: 650px;
+        height: 550px;
+    }
+    #Dragon2 {
+        top: 750px;
+        left: 60px;
+        width: 650px;
+        height: 550px;
+    }
+    #Dragon3 {
+        top: 1345px;
+        left: 60px;
+        width: 650px;
+        height: 550px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+    #Dragon1 {
+        top: 140px; /* Под кнопками высотой 120px + отступ */
+        left: 40px;
+        width: 580px;
+        height: 480px;
+    }
+    #Dragon2 {
+        top: 660px;
+        left: 40px;
+        width: 580px;
+        height: 480px;
+    }
+    #Dragon3 {
+        top: 1180px;
+        left: 40px;
+        width: 580px;
+        height: 480px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Dragon1, #Dragon2, #Dragon3 {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 500px;
+        height: 400px;
+        margin: 20px auto;
+        display: block;
+    }
+    /* Отключаем hover для планшетов, заменяем на tap */
+    #Dragon1:hover img[alt="Dragon1"],
+    #Dragon2:hover img[alt="Dragon2"],
+    #Dragon3:hover img[alt="Dragon3"] {
+        opacity: 1;
+    }
+    #Dragon1:hover img[alt="info1"],
+    #Dragon2:hover img[alt="info2"],
+    #Dragon3:hover img[alt="info3"] {
+        opacity: 0;
+    }
+    /* Активное состояние для планшетов */
+    #Dragon1:active img[alt="Dragon1"] { opacity: 0; }
+    #Dragon1:active img[alt="info1"] { opacity: 1; }
+    #Dragon2:active img[alt="Dragon2"] { opacity: 0; }
+    #Dragon2:active img[alt="info2"] { opacity: 1; }
+    #Dragon3:active img[alt="Dragon3"] { opacity: 0; }
+    #Dragon3:active img[alt="info3"] { opacity: 1; }
+}
+/* Планшеты в портретной ориентации */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    #Dragon1, #Dragon2, #Dragon3 {
+        max-width: 450px;
+        height: 360px;
+        margin: 25px auto;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    #Dragon1, #Dragon2, #Dragon3 {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 400px;
+        height: 320px;
+        margin: 15px auto;
+        display: block;
+    }
+    /* Убираем hover эффекты */
+    #Dragon1:hover img[alt="Dragon1"],
+    #Dragon2:hover img[alt="Dragon2"],
+    #Dragon3:hover img[alt="Dragon3"] {
+        opacity: 1;
+    }
+    #Dragon1:hover img[alt="info1"],
+    #Dragon2:hover img[alt="info2"],
+    #Dragon3:hover img[alt="info3"] {
+        opacity: 0;
+    }
+    /* Добавляем touch эффекты */
+    #Dragon1:active img[alt="Dragon1"] { opacity: 0; }
+    #Dragon1:active img[alt="info1"] { opacity: 1; }
+    #Dragon2:active img[alt="Dragon2"] { opacity: 0; }
+    #Dragon2:active img[alt="info2"] { opacity: 1; }
+    #Dragon3:active img[alt="Dragon3"] { opacity: 0; }
+    #Dragon3:active img[alt="info3"] { opacity: 1; }
+}
+/* Горизонтальная ориентация для больших мобильных */
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    #Dragon1, #Dragon2, #Dragon3 {
+        max-width: 350px;
+        height: 250px;
+        margin: 12px auto;
+    }
+}
+@media (min-width: 361px) and (max-width: 480px) {
+    #Dragon1, #Dragon2, #Dragon3 {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 320px;
+        height: 260px;
+        margin: 12px auto;
+        display: block;
+    }
+    /* Touch эффекты */
+    #Dragon1:active img[alt="Dragon1"] { opacity: 0; }
+    #Dragon1:active img[alt="info1"] { opacity: 1; }
+    #Dragon2:active img[alt="Dragon2"] { opacity: 0; }
+    #Dragon2:active img[alt="info2"] { opacity: 1; }
+    #Dragon3:active img[alt="Dragon3"] { opacity: 0; }
+    #Dragon3:active img[alt="info3"] { opacity: 1; }
+}
+@media (max-width: 360px) {
+    #Dragon1, #Dragon2, #Dragon3 {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 280px;
+        height: 220px;
+        margin: 10px auto;
+        display: block;
+    }
+    /* Touch эффекты для маленьких экранов */
+    #Dragon1:active img[alt="Dragon1"] { opacity: 0; }
+    #Dragon1:active img[alt="info1"] { opacity: 1; }
+    #Dragon2:active img[alt="Dragon2"] { opacity: 0; }
+    #Dragon2:active img[alt="info2"] { opacity: 1; }
+    #Dragon3:active img[alt="Dragon3"] { opacity: 0; }
+    #Dragon3:active img[alt="info3"] { opacity: 1; }
+}
+@media (max-width: 320px) {
+    #Dragon1, #Dragon2, #Dragon3 {
+        max-width: 240px;
+        height: 180px;
+        margin: 8px auto;
+    }
+}
+/* Базовые стили для всех блоков Eg */
+#Eg1, #Eg2, #Eg3 {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.2s ease;
+}
+#Eg1 img, #Eg2 img, #Eg3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+/* Скрытые temp изображения по умолчанию */
+#Eg1 img[alt="Temp1"],
+#Eg2 img[alt="Temp2"], 
+#Eg3 img[alt="Temp3"] {
+    opacity: 0;
+}
+/* Видимые основные изображения */
+#Eg1 img[alt="Eg1"],
+#Eg2 img[alt="Eg2"],
+#Eg3 img[alt="Eg3"] {
+    opacity: 1;
+}
+/* Hover эффекты для десктопа */
+#Eg1:hover img[alt="Eg1"] { opacity: 0; }
+#Eg1:hover img[alt="Temp1"] { opacity: 1; }
+
+#Eg2:hover img[alt="Eg2"] { opacity: 0; }
+#Eg2:hover img[alt="Temp2"] { opacity: 1; }
+
+#Eg3:hover img[alt="Eg3"] { opacity: 0; }
+#Eg3:hover img[alt="Temp3"] { opacity: 1; }
+
+@media (min-width: 2560px) {
+    #Eg1 {
+        top: 220px; /* Соответствует Dragon1 */
+        right: 200px; /* Симметрично с левой стороной */
+        width: 900px;
+        height: 750px;
+    }
+    #Eg2 {
+        top: 1050px; /* Соответствует Dragon2 */
+        right: 200px;
+        width: 900px;
+        height: 750px;
+    }
+    #Eg3 {
+        top: 1880px; /* Соответствует Dragon3 */
+        right: 200px;
+        width: 900px;
+        height: 750px;
+    }
+}
+
+@media (min-width: 2000px) and (max-width: 2559px) {
+    #Eg1 {
+        top: 195px;
+        right: 120px;
+        width: 800px;
+        height: 680px;
+    }
+    #Eg2 {
+        top: 950px;
+        right: 120px;
+        width: 800px;
+        height: 680px;
+    }
+    #Eg3 {
+        top: 1705px;
+        right: 120px;
+        width: 800px;
+        height: 680px;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1999px) {
+    #Eg1 {
+        top: 180px;
+        right: 100px;
+        width: 750px;
+        height: 640px;
+    }
+    #Eg2 {
+        top: 880px;
+        right: 100px;
+        width: 750px;
+        height: 640px;
+    }
+    #Eg3 {
+        top: 1580px;
+        right: 100px;
+        width: 750px;
+        height: 640px;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+    #Eg1 {
+        top: 170px;
+        right: 80px;
+        width: 700px;
+        height: 600px;
+    }
+    #Eg2 {
+        top: 820px;
+        right: 80px;
+        width: 700px;
+        height: 600px;
+    }
+    #Eg3 {
+        top: 1470px;
+        right: 80px;
+        width: 700px;
+        height: 600px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    #Eg1 {
+        top: 155px;
+        right: 60px;
+        width: 650px;
+        height: 550px;
+    }
+    #Eg2 {
+        top: 750px;
+        right: 60px;
+        width: 650px;
+        height: 550px;
+    }
+    #Eg3 {
+        top: 1345px;
+        right: 60px;
+        width: 650px;
+        height: 550px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+    #Eg1 {
+        top: 140px;
+        right: 40px;
+        width: 580px;
+        height: 480px;
+    }
+    #Eg2 {
+        top: 660px;
+        right: 40px;
+        width: 580px;
+        height: 480px;
+    }
+    #Eg3 {
+        top: 1180px;
+        right: 40px;
+        width: 580px;
+        height: 480px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Eg1, #Eg2, #Eg3 {
+        position: relative;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 500px;
+        height: 400px;
+        margin: 20px auto;
+        display: block;
+    }
+    /* Отключаем hover для планшетов, заменяем на tap */
+    #Eg1:hover img[alt="Eg1"],
+    #Eg2:hover img[alt="Eg2"],
+    #Eg3:hover img[alt="Eg3"] {
+        opacity: 1;
+    }
+    
+    #Eg1:hover img[alt="Temp1"],
+    #Eg2:hover img[alt="Temp2"],
+    #Eg3:hover img[alt="Temp3"] {
+        opacity: 0;
+    }
+    /* Активное состояние для планшетов */
+    #Eg1:active img[alt="Eg1"] { opacity: 0; }
+    #Eg1:active img[alt="Temp1"] { opacity: 1; }
+    
+    #Eg2:active img[alt="Eg2"] { opacity: 0; }
+    #Eg2:active img[alt="Temp2"] { opacity: 1; }
+    
+    #Eg3:active img[alt="Eg3"] { opacity: 0; }
+    #Eg3:active img[alt="Temp3"] { opacity: 1; }
+}
+/* Планшеты в портретной ориентации */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    #Eg1, #Eg2, #Eg3 {
+        max-width: 450px;
+        height: 360px;
+        margin: 25px auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #Eg1, #Eg2, #Eg3 {
+        position: relative;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 400px;
+        height: 320px;
+        margin: 15px auto;
+        display: block;
+    }
+    /* Убираем hover эффекты */
+    #Eg1:hover img[alt="Eg1"],
+    #Eg2:hover img[alt="Eg2"],
+    #Eg3:hover img[alt="Eg3"] {
+        opacity: 1;
+    }
+    
+    #Eg1:hover img[alt="Temp1"],
+    #Eg2:hover img[alt="Temp2"],
+    #Eg3:hover img[alt="Temp3"] {
+        opacity: 0;
+    }
+    /* Добавляем touch эффекты */
+    #Eg1:active img[alt="Eg1"] { opacity: 0; }
+    #Eg1:active img[alt="Temp1"] { opacity: 1; }
+    
+    #Eg2:active img[alt="Eg2"] { opacity: 0; }
+    #Eg2:active img[alt="Temp2"] { opacity: 1; }
+    
+    #Eg3:active img[alt="Eg3"] { opacity: 0; }
+    #Eg3:active img[alt="Temp3"] { opacity: 1; }
+}
+/* Горизонтальная ориентация для больших мобильных */
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    #Eg1, #Eg2, #Eg3 {
+        max-width: 350px;
+        height: 250px;
+        margin: 12px auto;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+    #Eg1, #Eg2, #Eg3 {
+        position: relative;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 320px;
+        height: 260px;
+        margin: 12px auto;
+        display: block;
+    }
+    /* Touch эффекты */
+    #Eg1:active img[alt="Eg1"] { opacity: 0; }
+    #Eg1:active img[alt="Temp1"] { opacity: 1; }
+    
+    #Eg2:active img[alt="Eg2"] { opacity: 0; }
+    #Eg2:active img[alt="Temp2"] { opacity: 1; }
+    
+    #Eg3:active img[alt="Eg3"] { opacity: 0; }
+    #Eg3:active img[alt="Temp3"] { opacity: 1; }
+}
+
+   @media (max-width: 360px) {
+    #Eg1, #Eg2, #Eg3 {
+        position: relative;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 280px;
+        height: 220px;
+        margin: 10px auto;
+        display: block;
+    }
+    /* Touch эффекты для маленьких экранов */
+    #Eg1:active img[alt="Eg1"] { opacity: 0; }
+    #Eg1:active img[alt="Temp1"] { opacity: 1; }
+    
+    #Eg2:active img[alt="Eg2"] { opacity: 0; }
+    #Eg2:active img[alt="Temp2"] { opacity: 1; }
+    
+    #Eg3:active img[alt="Eg3"] { opacity: 0; }
+    #Eg3:active img[alt="Temp3"] { opacity: 1; }
+}
+
+@media (max-width: 320px) {
+    #Eg1, #Eg2, #Eg3 {
+        max-width: 240px;
+        height: 180px;
+        margin: 8px auto;
+    }
+}
